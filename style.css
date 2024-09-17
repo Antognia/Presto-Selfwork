@@ -1,0 +1,322 @@
+/* Setaggio Pagina */
+:root{
+    --yellow :#ad7d37;
+    --green: #334e30;
+    --white: #7e7863;
+    --neon: #06D001;
+    --blue: #2e557c;
+    --red: #381010;
+                                                
+}
+
+*{
+    font-family: "Gothic A1", sans-serif;
+}
+
+/* Stile Titoli */
+h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+    font-family: 'Star Wars', sans-serif;
+}
+
+
+/* Classi Sfondo e Testo */
+.bg-yellow{
+    background-color: var(--yellow);
+}
+.bg-red{
+    background-color: var(--red);
+}
+
+
+.bg-green{
+    background-color: var(--green);
+}
+
+.bg-blue-e{
+    background-color: var(--blue);
+}
+
+.text-yellow{
+    color: var(--yellow);
+}
+
+.text-green{
+    color: var(--green);
+}
+
+.text-white{
+    color: var(--white);
+}
+
+.text-red{
+    color: var(--red);
+}
+/* Modifiche Pagina */
+
+body {
+background-color: var(--white);
+}
+
+
+/* Navbar */
+
+#navbar{
+    transition: 0.5s;
+}
+
+
+.nav-link{
+    font-weight: bold;
+    color: var(--yellow);
+    background-position: 0 0;
+}
+
+.nav-link:hover{
+    color: var(--neon);
+    background: linear-gradient(to left, var(--yellow) 50%, var(--neon) 50%);
+    text-shadow: 1px 2px 5px var(--neon), -1px -2px 5px var(--neon);
+    background-size: 200% 100%; 
+    background-clip: text;
+    -webkit-background-clip: text; 
+    color: transparent; 
+    transition: background-position 3s ease;
+    background-position: -100% 0;
+}
+
+.logo-custom{
+    height: 30px;
+    width: 80px;
+}
+
+.manico-spada{
+    height: 20px;
+    width: 60px;
+    position: relative;
+    top: 10px;
+    left: 6px;  
+}
+
+.spada2{
+    width: 100px;
+   transition: 0.5s;
+}
+
+/* Header */
+
+.head-one{
+    text-wrap: balance;
+}
+
+.header{
+    background-image: linear-gradient(rgba(0,0,0), transparent, rgba(0,0,0)), url(./Immagini/StarWSfondo.jpg);
+    width: auto;
+}
+
+.btn-custom{
+    color: var(--yellow);
+    background-color: var(--red);
+    border: 2px solid var(--yellow);
+    border-radius: 50px;
+    margin : 10px;
+
+}
+
+.btn-custom:hover{
+    cursor: pointer;
+    color: var(--red);
+    background-color: var(--yellow);
+    transform: scale(1.1);
+    /* box-shadow: 2px 2px 3px var(--yellow), -2px -2px 3px var(--yellow); */
+
+}
+
+/* positioned */
+
+.positioned{
+    position: relative;
+    top: -150px;
+}
+
+.col-custom{
+    padding: 10px;
+    margin: px;
+    border : 2px solid var(--red);
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 20px;
+
+
+}
+
+.col-custom:hover{
+    transform: scale(1.1);
+    background-color: var(--red);
+    color: var(--yellow);
+    border: 2px solid var(--yellow);
+}
+
+
+@media  screen and (max-width: 600px){
+   positioned{
+   position:static;
+}
+} 
+
+
+/* Numbers */
+
+.number{
+    font-size: 50px;
+    font-weight: 900;
+}
+
+/* Swiper - Recensioni */
+
+.swiper {
+ 
+    height: 300px;
+  }
+  
+  .card-review{
+    height: 250px;
+    width: 500px;
+    border: 2px solid var(--yellow);
+    border: 20px;
+  }
+
+  .swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Pagina Annunci */
+
+  .accordion-button{
+background-color: var(--white);
+  }
+
+  .accordion-button:not(.collapse){
+    background-color: var(--yellow);
+    color: var(--blue);
+
+  }
+
+  .accordion-button:focus{
+    box-shadow : none;
+  }
+
+  .accordion-item{
+    background-color: var(--white);
+    color: var(--red);
+  }
+
+  /* Card - annunci */
+.card-custom{
+    height: 300px;
+    width: 300px;
+    border: 2px solid var(--green);
+    padding: 10px;
+    text-align: center;
+   
+}
+
+/* Chi siamo */
+
+.circle{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 4px solid var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: relative; 
+    /* Il padre deve avere relative per permettere l'uso di z-index */
+}
+
+
+.vh-75{
+    height: 75vh;
+}
+
+.opener{
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    border: 4px solid var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: absolute;
+    z-index: 3;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: var(--red);
+}
+
+.moved{
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    border: 4px solid var(--red);
+    position: absolute;
+    z-index: 2;
+   transition: 0.5s;
+   background-position: center;
+   background-size: 100%;
+   cursor: pointer;
+}
+
+/* FLIP CARD */
+
+.flip-card{
+    height: 400px;
+    width: 300px;
+    /* background-image: url(./Immagini/teacher_photo.jpeg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat; */
+    transition: 0.5s;
+    
+    
+}
+
+.flip-card:hover > .inner{
+    transform: rotateY(180deg);
+    
+}
+
+.inner{
+    border: 3px solid var(--neon);
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    /* Da aggiungere per far funzionare backface-visibility */
+}
+
+.inner-face{
+    height: 395px;
+    width: 295px;
+    background-image: url(./Immagini/teacher_photo.jpeg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    position: absolute;
+    backface-visibility: hidden;
+    /* Nascondi la tua parte posteriore */
+}
+    
+.inner-back{
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 15px;
+    backface-visibility: hidden;
+}
