@@ -31,11 +31,11 @@ fetch('./annunci.json').then((response) => response.json()).then((data) => {
 
     function showCards(array) {
         cardWrapper.innerHTML = '';
-        array.forEach((annuncio) => {
+        array.forEach((annuncio, i) => {
             let div = document.createElement('div');
             div.classList.add('card-custom', 'text-center');
             div.innerHTML = `
-                <img src="${annuncio.homeworld}" alt="immagine random" class="img-fluid">
+                <img src="https://picsum.photos/${300 + i}" alt="immagine random" class="img-fluid img-custom">
                 <p class="h2" title="${annuncio.name}">${truncateWord(annuncio.name)}</p>
                 <p class="h3">${annuncio.category}</p>
                 <p class="h4">${annuncio.price}</p>
